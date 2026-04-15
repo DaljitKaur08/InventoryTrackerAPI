@@ -20,7 +20,7 @@ namespace InventoryTrackerAPI.Controllers
             _mapper = mapper;
         }
 
-        // GET ALL
+        // GET 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<OrderDTO>>> GetOrders()
         {
@@ -28,7 +28,7 @@ namespace InventoryTrackerAPI.Controllers
             return Ok(_mapper.Map<List<OrderDTO>>(orders));
         }
 
-        // GET BY ID
+        // GET 
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderDTO>> GetOrder(int id)
         {
